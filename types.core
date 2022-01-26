@@ -1,0 +1,15 @@
+CAPI=2:
+
+name: mkru:vhdl:types
+
+filesets:
+  pkg:
+    files:
+      - types.vhd
+    file_type: vhdlSource-2008
+    logical_name: types
+
+targets:
+  default:
+    filesets:
+      - pkg
