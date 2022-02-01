@@ -14,4 +14,11 @@ package types is
    type slv_vector_2d is array (natural range <>) of slv_vector;
    type slv_vector_3d is array (natural range <>) of slv_vector_2d;
 
+
+   subtype int64        is signed(63 downto 0);
+   type    int64_vector is array (natural range <>) of int64;
+
+
+   type string_vector is array (natural range <>) of string;
+
 end package;
