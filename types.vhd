@@ -7,7 +7,7 @@ library ieee;
    use ieee.numeric_std.all;
 
 
--- types is a package collecting useful types that are frequently used, but are not part of the standard.
+-- Package types collects useful types that are frequently used, but are not part of the standard.
 package types is
 
    type slv_vector    is array (natural range <>) of std_logic_vector;
