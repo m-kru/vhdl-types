@@ -10,6 +10,11 @@ library ieee;
 -- Package types collects useful types that are frequently used, but are not part of the standard.
 package types is
 
+   type bitv_vector    is array (natural range <>) of bit_vector;
+   type bitv_vector_2d is array (natural range <>) of bitv_vector;
+   type bitv_vector_3d is array (natural range <>) of bitv_vector_2d;
+
+
    type slv_vector    is array (natural range <>) of std_logic_vector;
    type slv_vector_2d is array (natural range <>) of slv_vector;
    type slv_vector_3d is array (natural range <>) of slv_vector_2d;
