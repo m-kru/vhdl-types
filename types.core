@@ -7,7 +7,7 @@ filesets:
     files:
       - types.vhd
     file_type: vhdlSource-2008
-    logical_name: types
+    logical_name: ltypes
 
 targets:
   default:
