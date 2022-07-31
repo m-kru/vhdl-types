@@ -1,6 +1,6 @@
 CAPI=2:
 
-name: mkru:vhdl:types
+name: mkru:vhdl-types:types
 
 filesets:
   pkg:
