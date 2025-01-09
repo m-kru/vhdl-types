@@ -1,0 +1,8 @@
+namespace eval vhdl-types {
+	proc src {} {
+		hbs::SetLib "ltypes"
+		hbs::AddFile types.vhd
+	}
+
+	hbs::Register
+}
