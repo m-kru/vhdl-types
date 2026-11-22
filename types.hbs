@@ -16,4 +16,13 @@ namespace eval vhdl::types {
 
     hbs::Register "VHDL package with 64-bit wide integer type."
   }
+
+  namespace eval data {
+    proc src {} {
+      hbs::SetLib "types"
+      hbs::AddFile data.vhd
+    }
+
+    hbs::Register "Package with data types of different widths being the power of 2."
+  }
 }
