@@ -1,8 +1,19 @@
 namespace eval vhdl::types {
-  proc src {} {
-    hbs::SetLib "ltypes"
-    hbs::AddFile types.vhd
+  namespace eval arrays {
+    proc src {} {
+      hbs::SetLib "types"
+      hbs::AddFile arrays.vhd
+    }
+
+    hbs::Register "Collection of useful VHDL array and vector types that are frequently used, but are not part of the standard."
   }
 
-  hbs::Register "Collection of useful VHDL types that are frequently used, but are not part of the standard."
+  namespace eval integer64 {
+    proc src {} {
+      hbs::SetLib "types"
+      hbs::AddFile integer64.vhd
+    }
+
+    hbs::Register "VHDL package with 64-bit wide integer type."
+  }
 }
