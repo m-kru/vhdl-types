@@ -25,4 +25,13 @@ namespace eval vhdl::types {
 
     hbs::Register "Package with data types of different widths being the power of 2."
   }
+
+  namespace eval fstring {
+    proc src {} {
+      hbs::SetLib "types"
+      hbs::AddFile fstring.vhd
+    }
+
+    hbs::Register "Package with string types with fixed length (aka. fixed string)."
+  }
 }
