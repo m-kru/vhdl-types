@@ -2,6 +2,8 @@
 -- https://github.com/m-kru/vhdl-amba5
 -- Copyright (c) 2026 Michał Kruszewski
 
+-- The fstring package contains string types with fixed capacity.
+-- The logical string ends at the first NUL, or at capacity if no NUL is present.
 package fstring is
 
   --
@@ -41,12 +43,12 @@ package body fstring is
 
   function make (str : string) return fstr256_t is
     variable s : fstr256_t := NULL_FSTR256;
+    variable s_idx : positive := s'low;
   begin
     for i in str'range loop
-      if str(i) = character'val(0) then
-        return s;
-      end if;
-      s(i) := str(i);
+      exit when str(i) = NUL;
+      s(s_idx) := str(i);
+      s_idx := s_idx + 1;
     end loop;
     return s;
   end function;
